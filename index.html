@@ -850,51 +850,16 @@ ul{list-style:none;}
         </ul>
       </div>
       <div class="footer-col">
-  <h4>Payment Methods</h4>
-
-  <div class="payment-methods-footer">
-
-    <div class="payment-group">
-      <span class="payment-group-title">Local Payments</span>
-
-      <div class="payment-badges">
-        <span class="payment-badge">JazzCash</span>
-        <span class="payment-badge">OPay</span>
-        <span class="payment-badge">RAQMI</span>
-        <span class="payment-badge">BankIslami</span>
+        <h4>Payment</h4>
+        <div class="opay-visual-card" role="img" aria-label="OPay online payment, number 0327 2199679">
+          <div class="opay-card-top">
+            <span class="opay-card-brand">OPay</span>
+            <span class="opay-card-chip" aria-hidden="true"></span>
+          </div>
+          <p class="opay-card-type">ONLINE PAYMENT</p>
+          <p class="opay-card-number">0327 2199679</p>
+        </div>
       </div>
-    </div>
-
-    <div class="payment-group">
-      <span class="payment-group-title">Cards</span>
-
-      <div class="payment-badges">
-
-        <span class="payment-badge visa-badge">
-          <strong>VISA</strong>
-        </span>
-<div class="footer-follow-section">
-        <span class="payment-badge mastercard-badge">
-          <span class="mc-symbol">
-            <span></span>
-            <span></span>
-          </span>
-          <strong>mastercard</strong>
-        </span>
-
-        <span class="payment-badge">
-          Mastercard Debit
-        </span>
-
-        <span class="payment-badge">
-          Mastercard Credit
-        </span>
-
-      </div>
-    </div>
-
-  </div>
-</div>
     </div>
 
     <div class="footer-follow-section">
@@ -994,159 +959,160 @@ ul{list-style:none;}
 </div>
 
 <!-- CHECKOUT MODAL: Product → Cart → Checkout → Order Confirmation -->
+
 <div class="checkout-modal" id="checkoutModal">
   <div class="checkout-modal-scrim" id="checkoutScrim"></div>
   <div class="checkout-box">
     <button class="checkout-close" id="checkoutClose" aria-label="Close checkout"><svg viewBox="0 0 24 24" stroke-width="1.5"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></button>
 
-    <!-- EMPTY CART VIEW -->
-    <div class="checkout-empty" id="checkoutEmptyView" style="display:none;">
-      <h2>Your Cart Is Empty</h2>
-      <p>Looks like you haven't added any trousers yet. Explore the collection to find your perfect fit.</p>
-      <button class="btn btn-dark" id="continueShoppingEmptyBtn">CONTINUE SHOPPING</button>
-    </div>
+<!-- EMPTY CART VIEW -->
+<div class="checkout-empty" id="checkoutEmptyView" style="display:none;">
+  <h2>Your Cart Is Empty</h2>
+  <p>Looks like you haven't added any trousers yet. Explore the collection to find your perfect fit.</p>
+  <button class="btn btn-dark" id="continueShoppingEmptyBtn">CONTINUE SHOPPING</button>
+</div>
 
-    <!-- CHECKOUT FORM VIEW -->
-    <div class="checkout-pad" id="checkoutFormView" style="display:none;">
-      <h2>Checkout</h2>
-      <p class="checkout-sub">Product → Cart → Checkout → Order Confirmation</p>
-      <div class="checkout-grid">
-        <div class="checkout-form-col">
-          <h3>Customer Information</h3>
-          <div class="form-field" id="fieldFullName">
-            <label for="coFullName">Full Name</label>
-            <input type="text" id="coFullName" autocomplete="name">
-            <p class="field-error">Please enter your full name.</p>
-          </div>
-          <div class="form-row-2">
-            <div class="form-field" id="fieldPhone">
-              <label for="coPhone">Phone Number</label>
-              <input type="tel" id="coPhone" autocomplete="tel">
-              <p class="field-error">Please enter a valid phone number.</p>
-            </div>
-            <div class="form-field" id="fieldEmail">
-              <label for="coEmail">Email Address (optional)</label>
-              <input type="email" id="coEmail" autocomplete="email">
-              <p class="field-error">Please enter a valid email address.</p>
-            </div>
-          </div>
-
-          <h3>Delivery Address</h3>
-          <div class="form-row-2">
-            <div class="form-field" id="fieldHouse">
-              <label for="coHouse">House / Flat Number</label>
-              <input type="text" id="coHouse">
-              <p class="field-error">Please enter your house / flat number.</p>
-            </div>
-            <div class="form-field" id="fieldArea">
-              <label for="coArea">Street / Area</label>
-              <input type="text" id="coArea">
-              <p class="field-error">Please enter your street / area.</p>
-            </div>
-          </div>
-          <div class="form-field" id="fieldCity">
-            <label for="coCity">City</label>
-            <input type="text" id="coCity">
-            <p class="field-error">Please enter your city.</p>
-          </div>
-          <div class="form-field">
-            <label for="coInstructions">Delivery Instructions (optional)</label>
-            <textarea id="coInstructions" placeholder="e.g. Ring the bell twice, leave with security guard..."></textarea>
-          </div>
-
-          <div class="payment-section">
-            <h3 style="margin-top:0;">Payment Method</h3>
-            <div class="payment-options">
-              <label class="payment-option selected" id="pmCodLabel" for="pmCod">
-                <input type="radio" name="paymentMethod" value="cod" id="pmCod" checked>
-                <svg class="pm-icon" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke="currentColor"><rect x="2" y="6" width="20" height="13" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg>
-                <span class="po-text"><strong>Cash on Delivery</strong><small>Pay when your order arrives</small></span>
-              </label>
-              <label class="payment-option" id="pmOnlineLabel" for="pmOnline">
-                <input type="radio" name="paymentMethod" value="online" id="pmOnline">
-                <svg class="pm-icon" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
-                <span class="po-text"><strong>Online Payment</strong><small>Pay via OPay</small></span>
-              </label>
-            </div>
-            <div class="opay-box" id="opayBox" style="display:none;">
-              <p><strong>OPay</strong></p>
-              <p>OPay Account / Mobile Number: <span class="opay-account">03272199679</span></p>
-              <p class="opay-instruction">Send your payment to the OPay account above and enter your transaction/reference number below.</p>
-              <div class="form-field" id="fieldTxnRef">
-                <label for="coTxnRef">Transaction / Reference Number</label>
-                <input type="text" id="coTxnRef">
-                <p class="field-error">Please enter your transaction/reference number.</p>
-              </div>
-            </div>
-          </div>
-
-          <p class="checkout-errors" id="checkoutErrors">Please correct the highlighted fields above before placing your order.</p>
-          <button class="btn btn-dark btn-place-order" id="placeOrderBtn">PLACE ORDER</button>
+<!-- CHECKOUT FORM VIEW -->
+<div class="checkout-pad" id="checkoutFormView" style="display:none;">
+  <h2>Checkout</h2>
+  <p class="checkout-sub">Product → Cart → Checkout → Order Confirmation</p>
+  <div class="checkout-grid">
+    <div class="checkout-form-col">
+      <h3>Customer Information</h3>
+      <div class="form-field" id="fieldFullName">
+        <label for="coFullName">Full Name</label>
+        <input type="text" id="coFullName" autocomplete="name">
+        <p class="field-error">Please enter your full name.</p>
+      </div>
+      <div class="form-row-2">
+        <div class="form-field" id="fieldPhone">
+          <label for="coPhone">Phone Number</label>
+          <input type="tel" id="coPhone" autocomplete="tel">
+          <p class="field-error">Please enter a valid phone number.</p>
         </div>
-
-        <div class="checkout-summary-col">
-          <h3>Order Summary</h3>
-          <div id="checkoutItemsList"></div>
-
-          <div class="promo-box">
-            <p class="promo-label">Have a voucher or gift card?</p>
-            <div class="promo-row">
-              <input type="text" id="voucherInput" placeholder="Enter voucher code">
-              <button class="btn btn-dark btn-sm" id="applyVoucherBtn">APPLY</button>
-            </div>
-            <p class="promo-msg" id="voucherMsg"></p>
-            <div class="applied-chip" id="voucherChip"><span id="voucherChipText"></span><button id="removeVoucherBtn">Remove</button></div>
-          </div>
-
-          <div class="promo-box">
-            <p class="promo-label">Gift Cards</p>
-            <p class="promo-sub">Have a Prime Trousers gift card?</p>
-            <div class="promo-row">
-              <input type="text" id="giftCardInput" placeholder="Gift card code">
-              <button class="btn btn-dark btn-sm" id="applyGiftCardBtn">APPLY GIFT CARD</button>
-            </div>
-            <p class="promo-msg" id="giftCardMsg"></p>
-            <div class="applied-chip" id="giftCardChip"><span id="giftCardChipText"></span><button id="removeGiftCardBtn">Remove</button></div>
-          </div>
-
-          <div class="summary-row"><span>Subtotal</span><span id="coSubtotal">Rs. 0</span></div>
-          <div class="summary-row"><span>Delivery</span><span id="coDelivery">Rs. 0</span></div>
-          <p class="delivery-msg" id="coDeliveryMsg"></p>
-          <div class="summary-row" id="coVoucherRow" style="display:none;"><span>Voucher Discount</span><span id="coVoucherDiscount">-Rs. 0</span></div>
-          <div class="summary-row" id="coGiftRow" style="display:none;"><span>Gift Card Discount</span><span id="coGiftDiscount">-Rs. 0</span></div>
-          <div class="summary-row grand"><span>Grand Total</span><span id="coGrandTotal">Rs. 0</span></div>
+        <div class="form-field" id="fieldEmail">
+          <label for="coEmail">Email Address (optional)</label>
+          <input type="email" id="coEmail" autocomplete="email">
+          <p class="field-error">Please enter a valid email address.</p>
         </div>
       </div>
+
+      <h3>Delivery Address</h3>
+      <div class="form-row-2">
+        <div class="form-field" id="fieldHouse">
+          <label for="coHouse">House / Flat Number</label>
+          <input type="text" id="coHouse">
+          <p class="field-error">Please enter your house / flat number.</p>
+        </div>
+        <div class="form-field" id="fieldArea">
+          <label for="coArea">Street / Area</label>
+          <input type="text" id="coArea">
+          <p class="field-error">Please enter your street / area.</p>
+        </div>
+      </div>
+      <div class="form-field" id="fieldCity">
+        <label for="coCity">City</label>
+        <input type="text" id="coCity">
+        <p class="field-error">Please enter your city.</p>
+      </div>
+      <div class="form-field">
+        <label for="coInstructions">Delivery Instructions (optional)</label>
+        <textarea id="coInstructions" placeholder="e.g. Ring the bell twice, leave with security guard..."></textarea>
+      </div>
+
+      <div class="payment-section">
+        <h3 style="margin-top:0;">Payment Method</h3>
+        <div class="payment-options">
+          <label class="payment-option selected" id="pmCodLabel" for="pmCod">
+            <input type="radio" name="paymentMethod" value="cod" id="pmCod" checked>
+            <svg class="pm-icon" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke="currentColor"><rect x="2" y="6" width="20" height="13" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg>
+            <span class="po-text"><strong>Cash on Delivery</strong><small>Pay when your order arrives</small></span>
+          </label>
+          <label class="payment-option" id="pmOnlineLabel" for="pmOnline">
+            <input type="radio" name="paymentMethod" value="online" id="pmOnline">
+            <svg class="pm-icon" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+            <span class="po-text"><strong>Online Payment</strong><small>Pay via OPay</small></span>
+          </label>
+        </div>
+        <div class="opay-box" id="opayBox" style="display:none;">
+          <p><strong>OPay</strong></p>
+          <p>OPay Account / Mobile Number: <span class="opay-account">03272199679</span></p>
+          <p class="opay-instruction">Send your payment to the OPay account above and enter your transaction/reference number below.</p>
+          <div class="form-field" id="fieldTxnRef">
+            <label for="coTxnRef">Transaction / Reference Number</label>
+            <input type="text" id="coTxnRef">
+            <p class="field-error">Please enter your transaction/reference number.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="checkout-errors" id="checkoutErrors">Please correct the highlighted fields above before placing your order.</p>
+      <button class="btn btn-dark btn-place-order" id="placeOrderBtn">PLACE ORDER</button>
     </div>
 
-    <!-- ORDER CONFIRMATION VIEW -->
-    <div class="order-confirmation" id="checkoutConfirmView" style="display:none;">
-      <div class="confirm-icon">✓</div>
-      <h2>ORDER CONFIRMED ✓</h2>
-      <p class="sub-msg">Thank you for shopping with Prime Trousers.</p>
-      <div class="confirm-details">
-        <div class="confirm-row"><span>Order Number</span><strong id="confOrderNum"></strong></div>
-        <div class="confirm-row"><span>Customer Name</span><strong id="confName"></strong></div>
-        <div class="confirm-row"><span>Phone Number</span><strong id="confPhone"></strong></div>
-        <div class="confirm-row"><span>Payment Method</span><strong id="confPaymentMethod">Cash on Delivery</strong></div>
-        <div class="confirm-row" id="confTxnRow" style="display:none;"><span>Transaction Reference</span><strong id="confTxnRef"></strong></div>
-        <div class="confirm-row"><span>Delivery Address</span><strong id="confAddress"></strong></div>
+    <div class="checkout-summary-col">
+      <h3>Order Summary</h3>
+      <div id="checkoutItemsList"></div>
+
+      <div class="promo-box">
+        <p class="promo-label">Have a voucher or gift card?</p>
+        <div class="promo-row">
+          <input type="text" id="voucherInput" placeholder="Enter voucher code">
+          <button class="btn btn-dark btn-sm" id="applyVoucherBtn">APPLY</button>
+        </div>
+        <p class="promo-msg" id="voucherMsg"></p>
+        <div class="applied-chip" id="voucherChip"><span id="voucherChipText"></span><button id="removeVoucherBtn">Remove</button></div>
       </div>
-      <div class="confirm-items" id="confItemsList"></div>
-      <div class="confirm-total">
-        <div class="summary-row"><span>Subtotal</span><span id="confSubtotal">Rs. 0</span></div>
-        <div class="summary-row"><span>Delivery</span><span id="confDelivery">Rs. 150</span></div>
-        <div class="summary-row" id="confVoucherRow" style="display:none;"><span>Voucher Discount</span><span id="confVoucherDiscount">-Rs. 0</span></div>
-        <div class="summary-row" id="confGiftRow" style="display:none;"><span>Gift Card Discount</span><span id="confGiftDiscount">-Rs. 0</span></div>
-        <div class="summary-row grand"><span>Grand Total</span><span id="confTotal">Rs. 0</span></div>
+
+      <div class="promo-box">
+        <p class="promo-label">Gift Cards</p>
+        <p class="promo-sub">Have a Prime Trousers gift card?</p>
+        <div class="promo-row">
+          <input type="text" id="giftCardInput" placeholder="Gift card code">
+          <button class="btn btn-dark btn-sm" id="applyGiftCardBtn">APPLY GIFT CARD</button>
+        </div>
+        <p class="promo-msg" id="giftCardMsg"></p>
+        <div class="applied-chip" id="giftCardChip"><span id="giftCardChipText"></span><button id="removeGiftCardBtn">Remove</button></div>
       </div>
-      <p class="whatsapp-note">We've opened WhatsApp with your order details pre-filled — please press <strong>Send</strong> in WhatsApp to deliver it to us. If it didn't open automatically, tap the button below.</p>
-      <button class="btn btn-whatsapp" id="sendWhatsAppBtn">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="flex-shrink:0;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.46 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.11.12-1.79-.11a15 15 0 01-1.85-.68 12.4 12.4 0 01-4.55-4.03c-.33-.44-.68-.96-.68-1.53 0-.6.31-.9.42-1.04a.83.83 0 01.6-.28h.42c.14 0 .32-.02.5.38.19.44.65 1.5.7 1.62.06.11.09.24.02.39-.07.15-.11.24-.22.37-.11.13-.23.29-.33.39-.11.11-.22.23-.1.45.13.22.57.94 1.22 1.52.84.75 1.55 1 1.78 1.11.22.11.36.09.49-.05.14-.15.58-.68.73-.91.15-.23.3-.19.5-.11.2.07 1.28.6 1.5.71.22.11.36.16.42.25.05.09.05.55-.2 1.23z"/></svg>
-        SEND ORDER ON WHATSAPP
-      </button>
-      <button class="btn btn-dark" id="continueShoppingBtn">CONTINUE SHOPPING</button>
+
+      <div class="summary-row"><span>Subtotal</span><span id="coSubtotal">Rs. 0</span></div>
+      <div class="summary-row"><span>Delivery</span><span id="coDelivery">Rs. 0</span></div>
+      <p class="delivery-msg" id="coDeliveryMsg"></p>
+      <div class="summary-row" id="coVoucherRow" style="display:none;"><span>Voucher Discount</span><span id="coVoucherDiscount">-Rs. 0</span></div>
+      <div class="summary-row" id="coGiftRow" style="display:none;"><span>Gift Card Discount</span><span id="coGiftDiscount">-Rs. 0</span></div>
+      <div class="summary-row grand"><span>Grand Total</span><span id="coGrandTotal">Rs. 0</span></div>
     </div>
+  </div>
+</div>
+
+<!-- ORDER CONFIRMATION VIEW -->
+<div class="order-confirmation" id="checkoutConfirmView" style="display:none;">
+  <div class="confirm-icon">✓</div>
+  <h2>ORDER CONFIRMED ✓</h2>
+  <p class="sub-msg">Thank you for shopping with Prime Trousers.</p>
+  <div class="confirm-details">
+    <div class="confirm-row"><span>Order Number</span><strong id="confOrderNum"></strong></div>
+    <div class="confirm-row"><span>Customer Name</span><strong id="confName"></strong></div>
+    <div class="confirm-row"><span>Phone Number</span><strong id="confPhone"></strong></div>
+    <div class="confirm-row"><span>Payment Method</span><strong id="confPaymentMethod">Cash on Delivery</strong></div>
+    <div class="confirm-row" id="confTxnRow" style="display:none;"><span>Transaction Reference</span><strong id="confTxnRef"></strong></div>
+    <div class="confirm-row"><span>Delivery Address</span><strong id="confAddress"></strong></div>
+  </div>
+  <div class="confirm-items" id="confItemsList"></div>
+  <div class="confirm-total">
+    <div class="summary-row"><span>Subtotal</span><span id="confSubtotal">Rs. 0</span></div>
+    <div class="summary-row"><span>Delivery</span><span id="confDelivery">Rs. 150</span></div>
+    <div class="summary-row" id="confVoucherRow" style="display:none;"><span>Voucher Discount</span><span id="confVoucherDiscount">-Rs. 0</span></div>
+    <div class="summary-row" id="confGiftRow" style="display:none;"><span>Gift Card Discount</span><span id="confGiftDiscount">-Rs. 0</span></div>
+    <div class="summary-row grand"><span>Grand Total</span><span id="confTotal">Rs. 0</span></div>
+  </div>
+  <p class="whatsapp-note">We've opened WhatsApp with your order details pre-filled — please press <strong>Send</strong> in WhatsApp to deliver it to us. If it didn't open automatically, tap the button below.</p>
+  <button class="btn btn-whatsapp" id="sendWhatsAppBtn">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="flex-shrink:0;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.46 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.11.12-1.79-.11a15 15 0 01-1.85-.68 12.4 12.4 0 01-4.55-4.03c-.33-.44-.68-.96-.68-1.53 0-.6.31-.9.42-1.04a.83.83 0 01.6-.28h.42c.14 0 .32-.02.5.38.19.44.65 1.5.7 1.62.06.11.09.24.02.39-.07.15-.11.24-.22.37-.11.13-.23.29-.33.39-.11.11-.22.23-.1.45.13.22.57.94 1.22 1.52.84.75 1.55 1 1.78 1.11.22.11.36.09.49-.05.14-.15.58-.68.73-.91.15-.23.3-.19.5-.11.2.07 1.28.6 1.5.71.22.11.36.16.42.25.05.09.05.55-.2 1.23z"/></svg>
+    SEND ORDER ON WHATSAPP
+  </button>
+  <button class="btn btn-dark" id="continueShoppingBtn">CONTINUE SHOPPING</button>
+</div>
 
   </div>
 </div>
@@ -2069,5 +2035,6 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
