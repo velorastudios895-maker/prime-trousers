@@ -555,6 +555,127 @@ ul{list-style:none;}
 
 .toast{ position:fixed; bottom:26px; left:50%; transform: translateX(-50%) translateY(20px); background:var(--black); color:var(--white); padding:15px 28px; font-size:13px; letter-spacing:0.03em; z-index:120; opacity:0; visibility:hidden; transition: opacity .4s var(--ease), transform .4s var(--ease), visibility .4s; }
 .toast.show{ opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+  /* ===== PRIME TROUSERS MAIN CONTENT VISIBILITY FIX ===== */
+
+main {
+  color: var(--black);
+  background: var(--white);
+}
+
+main section {
+  color: var(--black);
+  background: var(--white);
+}
+
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  color: var(--black);
+}
+
+main p {
+  color: var(--charcoal);
+}
+
+main span {
+  color: inherit;
+}
+
+/* Section headings */
+.section-head h2 {
+  color: var(--black);
+}
+
+.section-head p {
+  color: var(--charcoal);
+}
+
+/* Cards */
+main .card,
+main .product-card,
+main .product-item,
+main .category-card,
+main .collection-card {
+  background: #ffffff;
+  color: var(--black);
+  border: 1px solid rgba(12,11,10,0.12);
+  box-shadow: 0 8px 24px rgba(12,11,10,0.06);
+}
+
+/* Card headings */
+main .card h1,
+main .card h2,
+main .card h3,
+main .card h4,
+main .product-card h1,
+main .product-card h2,
+main .product-card h3,
+main .product-card h4,
+main .product-item h1,
+main .product-item h2,
+main .product-item h3,
+main .product-item h4 {
+  color: var(--black);
+}
+
+/* Card descriptions */
+main .card p,
+main .product-card p,
+main .product-item p {
+  color: var(--charcoal);
+}
+
+/* Prices */
+main .price,
+main .product-price {
+  color: var(--black);
+  font-weight: 700;
+}
+
+/* Main buttons */
+main button,
+main .add-to-cart,
+main .add-cart,
+main .checkout-btn {
+  background: var(--black);
+  color: #ffffff;
+  border: 1px solid var(--black);
+}
+
+main button:hover,
+main .add-to-cart:hover,
+main .add-cart:hover,
+main .checkout-btn:hover {
+  background: var(--charcoal);
+  color: #ffffff;
+}
+
+/* Inputs */
+main input,
+main select,
+main textarea {
+  background: #ffffff;
+  color: var(--black);
+  border: 1px solid rgba(12,11,10,0.22);
+}
+
+main input::placeholder,
+main textarea::placeholder {
+  color: #777777;
+}
+
+/* Main links */
+main a {
+  color: var(--black);
+}
+
+/* Section borders */
+main > section {
+  border-bottom: 1px solid rgba(12,11,10,0.08);
+}
 </style>
 </head>
 <body>
